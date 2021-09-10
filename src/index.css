@@ -1,0 +1,151 @@
+:root{
+  --delete-color: rgb(255, 0, 0);
+  --add-color: #ADFF2F;
+  --background-light: rgb(255, 255, 255);
+  --background-dark: rgb(0,0,0);
+  --background-lgray: lightgray;
+  --body-font-size: 16pt;
+}
+
+@keyframes App-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  position: relative;
+  width: 100%;
+}
+
+h1{
+  font-family: 'Bebas Neue';
+}
+
+p, ul, li , span {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: var(--body-font-size);
+}
+
+input {
+  position: relative;
+  width: 300px;
+  height: 25px;
+  margin-right: 10px !important;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  font-size: var(--body-font-size);
+}
+
+input:focus {
+  outline: none;
+}
+
+.todo-body{
+  position: relative;
+  width: 100%;
+  
+  display: flex;
+}
+
+.todo-list{
+  position: relative;
+  width: 50%;
+  
+}
+
+.todo-add {
+  position: relative;
+  width: 50%;
+  
+}
+
+.item-row{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 15px 0px 15px 0px;
+  padding: 2%;
+  margin-bottom: 5%;
+  box-shadow: gray 0px 5px 5px 0px;
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.item-row:hover{
+  cursor: pointer;
+  border: 1px solid var(--background-dark);
+  transform: scale(1.05);
+  transition: all 1s;
+}
+
+.btn-delete{
+  position: relative;
+  background-color: var(--background-light);
+  cursor: pointer;
+  width: 75px;
+  font-size: xx-large;
+  color: var(--delete-color);
+  text-align: justify;
+  border: none;
+}
+
+.btn-add{
+  position: relative;
+  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 100%);
+  cursor: pointer;
+  width: 50px !important;  
+  border: none;
+}
+
+.btn-add > span {
+  font-size: xx-large !important;
+  font-weight: 900;
+  color: var(--background-light);
+}
+
+.add-form{
+  position: relative;
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loader{
+    position: relative;    
+    font-size: 3em;  
+    font-weight: 900;
+    animation: App-loading-spin 1s linear infinite;
+    color: var(--background-lgray);
+    /*background-color: brown;*/
+  }
+}
+
+.alert-container{
+  position: relative;
+  width: 80%;
+  margin:auto;
+}
+
+.footer{
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  text-align: center;
+  background-color: var(--background-dark);
+  color: #EEE;
+}
+
+ul, li {
+  list-style-type: none;
+  text-align: justify;
+}
